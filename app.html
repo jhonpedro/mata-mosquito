@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mata Moscas</title>
+        <link rel="icon" href="imagens/mosca.png">
+        <link rel="stylesheet" href="css/estilo.css">
+    </head>
+    <body onresize="tamanhoJanela()">
+
+        <div class="painel">
+            <div class="vida">
+                <img id="v1" src="imagens/coracao_cheio.png" alt="">
+                <img id="v2" src="imagens/coracao_cheio.png" alt="">
+                <img id="v3" src="imagens/coracao_cheio.png" alt="">
+            </div>
+            <div class="cronometro">
+                Tempo restante: <span id="tempo">30</span>
+                <!-- Coloque o tempo dentro da tag span acima -->
+            </div>
+        </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        var geraMoscas = setInterval(function() {
+            posicaoAleatoria()
+        }
+        ,tempo_Gera_Mosca)
+    </script>
+    </body>
+</html>

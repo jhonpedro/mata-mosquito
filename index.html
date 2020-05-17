@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mata Moscas</title>
+        <link rel="icon" href="imagens/mosca.png">
+        <!-- CSS Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <!-- CSS Custumizado -->
+        <link rel="stylesheet" href="css/estilo.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-center">
+                        <img src="imagens/game.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-center">
+                        <div class="my-3">
+                            <select class="form-control" id="dificuldade">
+                                <option value="0">Selecione o nível</option>
+                                <option value="1">Bem fácil</option>
+                                <option value="2">Aqui já começa a ficar legal</option>
+                                <option value="3">Impossível para humanos</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-center">
+                        <button class="btn btn-light" onclick="iniciarGame()">Iniciar Jogo!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script>
+        function iniciarGame() {
+            var dificuldade = document.querySelector('#dificuldade').value
+
+            if ( dificuldade == 0 ){
+                alert('Selecione uma dificuldade válida!!!')
+                return false
+            }
+            
+            window.location.href = 'app.html?' + dificuldade
+
+        }
+    </script>
+    
+    </body>
+</html>
